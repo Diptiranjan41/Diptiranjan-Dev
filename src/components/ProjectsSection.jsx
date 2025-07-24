@@ -10,26 +10,28 @@ const projects = [
     demoUrl: "https://rindia.netlify.app",
     githubUrl: "https://github.com/Diptiranjan41",
   },
+{
+  id: 2,
+  title: "Travel Planner – Go Vicky Go",
+  description:
+    "Go Vicky Go – Your Smart Travel Planner 🌍 Currently under development and partially implemented. The core travel planning and UI features are functional, while AI-powered trip suggestions and booking modules are in progress.",
+  image: "/projects/project2.png",
+  tags: ["React", "TailwindCSS", "API"],
+  demoUrl: "https://go-vicky-go-h2i2-git-main-diptiranjan-mahaptras-projects.vercel.app/",
+  githubUrl: "https://github.com/Diptiranjan41/Go-Vicky-Go",
+}
+,
   {
-    id: 2,
-    title: "Travel Planner – Go Vicky Go",
-    description:
-      "Go Vicky Go – Your Smart Travel Planner Plan smarter, travel better! Discover personalized trips, book everything in one place, and explore stress-free with AI-powered guidance. 🌍✈️",
-    image: "/projects/project2.png",
-    tags: ["React", "TailwindCSS", "API"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/Diptiranjan41",
-  },
-  {
-    id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
+  id: 3,
+  title: "AI-Powered Career Recommendation & Internship Matching Platform",
+  description:
+    "An AI-driven platform designed to recommend personalized career paths and match students with relevant internships based on their skills, interests, and academic background. (Under Development)",
+  image: "/projects/project3.png",
+  tags: ["React", "Node.js", "Express", "MongoDB", "Machine Learning"],
+  demoUrl: "#",
+  githubUrl: "#",
+}
+,
 ];
 
 export const ProjectsSection = () => {

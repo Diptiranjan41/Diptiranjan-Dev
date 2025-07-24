@@ -9,10 +9,6 @@ export const AchievementSection = () => {
       link: "/pdfs/ux.pdf",
     },
     {
-      title: "Responsive Web – freeCodeCamp",
-      link: "https://freecodecamp.org/certification/your-name/responsive-web-design",
-    },
-    {
       title: "Git & GitHub – Udemy",
       link: "https://udemy.com/certificate/git-github-link",
     },
@@ -20,10 +16,7 @@ export const AchievementSection = () => {
       title: "JS Algorithms – BOORD INFINITY",
       link: "/pdfs/dsajava.pdf",
     },
-    {
-      title: "React Basics – Coursera",
-      link: "https://coursera.org/share/react-basics-link",
-    },
+   
   ];
 
   const internships = [
