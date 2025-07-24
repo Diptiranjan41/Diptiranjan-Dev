@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This project highlights my skills, completed projects, and professional experiences as a Full Stack Web Developer.
 
-🔗 **Live Demo:** [View Live Site] ((https://diptranjan-jzmdwz2oz-diptiranjan-mahaptras-projects.vercel.app))
+🔗 **Live Demo:** [View Live Site] (https://diptiranjan-jzmdwz2oz-diptiranjan-mahaptras-projects.vercel.app)
 🛠️ **Technologies Used:** HTML, CSS, JavaScript, React, Tailwind CSS
 
 
