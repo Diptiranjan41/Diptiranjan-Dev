@@ -57,3 +57,7 @@ If you would like, I can also provide:
 
 Feel free to ask!
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 272c4aa (Fixed image path)

@@ -19,11 +19,13 @@ export const HeroSection = () => {
           <div className="flex justify-center items-center">
             <div className="relative group">
               <div className="w-40 h-40 rounded-full border-4 border-[#0F1729] group-hover:border-purple-500 transition-all duration-300 flex justify-center items-center overflow-hidden">
-                <img
-                  src="src/components/vicky.jpg"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
+             <img
+  src="/vicky.jpg"
+  alt="Profile"
+  className="w-full h-full object-cover"
+/>
+
+
               </div>
             </div>
           </div>

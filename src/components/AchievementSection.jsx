@@ -6,7 +6,7 @@ export const AchievementSection = () => {
     },
     {
       title: "Google UX Design Certificate",
-      link: "public/pdfs/ux.pdf",
+      link: "/pdfs/ux.pdf",
     },
     {
       title: "Responsive Web – freeCodeCamp",
