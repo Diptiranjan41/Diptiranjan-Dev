@@ -12,13 +12,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Travel Planner – Go Vicky Go",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "Go Vicky Go – Your Smart Travel Planner Plan smarter, travel better! Discover personalized trips, book everything in one place, and explore stress-free with AI-powered guidance. 🌍✈️",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["React", "TailwindCSS", "API"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Diptiranjan41",
   },
   {
     id: 3,

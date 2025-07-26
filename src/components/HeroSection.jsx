@@ -21,7 +21,7 @@ export const HeroSection = () => {
               <div className="w-40 h-40 rounded-full border-4 border-[#0F1729] group-hover:border-purple-500 transition-all duration-300 flex justify-center items-center overflow-hidden">
              <img
   src="/vicky.jpg"
-  alt="Profile"
+  alt=""
   className="w-full h-full object-cover"
 />
 
