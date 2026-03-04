@@ -30,13 +30,19 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-      <div className="container mx-auto max-w-5xl">
+    <section id="skills" className="py-24 px-4 relative overflow-hidden">
+      {/* Background glow effects - matching About section */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-40 right-20 w-72 h-72 bg-primary/20 rounded-full blur-[128px] animate-pulse" />
+        <div className="absolute bottom-40 left-20 w-72 h-72 bg-primary/20 rounded-full blur-[128px] animate-pulse delay-700" />
+      </div>
+
+      <div className="container mx-auto max-w-5xl relative">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary">Skills</span>
+          My <span className="text-primary glow-text">Skills</span>
         </h2>
 
-        {/* Category Buttons with Animation */}
+        {/* Category Buttons with Glassmorphism + Glow */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial="hidden"
@@ -58,20 +64,25 @@ export const SkillsSection = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               className={cn(
-                "px-5 py-2 rounded-full capitalize transition-all duration-300 border-2",
-                "hover:shadow-md hover:shadow-indigo-500 hover:scale-105",
-                "hover:border-primary hover:bg-primary hover:text-white",
+                "px-5 py-2 rounded-full capitalize transition-all duration-300 relative group",
+                "hover:shadow-glow-lg backdrop-blur-sm",
                 activeCategory === category
                   ? "bg-primary text-white border-primary"
-                  : "bg-secondary/70 text-foreground border-muted"
+                  : "bg-background/30 text-foreground border-primary/20 backdrop-blur-md"
               )}
+              style={{
+                borderWidth: "2px",
+                borderStyle: "solid",
+              }}
             >
-              {category}
+              {/* Glow effect on hover */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-primary/5 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300" />
+              <span className="relative z-10">{category}</span>
             </motion.button>
           ))}
         </motion.div>
 
-        {/* Skills Grid with Entry Animation */}
+        {/* Skills Grid with Glassmorphism + Glow */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
@@ -85,7 +96,7 @@ export const SkillsSection = () => {
           }}
         >
           <AnimatePresence mode="wait">
-            {filteredSkills.map((skill, key) => (
+            {filteredSkills.map((skill) => (
               <motion.div
                 key={skill.name}
                 layout
@@ -93,31 +104,77 @@ export const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="bg-card p-6 rounded-lg shadow-xs card-hover transition-transform hover:scale-[1.03]"
+                className="group relative"
               >
-                <div className="text-left mb-4">
-                  <h3 className="font-semibold text-lg">{skill.name}</h3>
-                </div>
+                {/* Glassmorphism base with glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500" />
+                
+                {/* Card content with glassmorphism */}
+                <div className="relative backdrop-blur-md bg-background/40 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl">
+                  <div className="text-left mb-4">
+                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                      {skill.name}
+                    </h3>
+                  </div>
 
-                <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
-                    className="bg-primary h-2 rounded-full"
-                  />
-                </div>
+                  <div className="w-full bg-primary/10 h-2 rounded-full overflow-hidden backdrop-blur-sm">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.2, ease: "easeOut" }}
+                      className="bg-gradient-to-r from-primary/80 to-primary h-2 rounded-full relative"
+                    >
+                      {/* Glow effect on progress bar */}
+                      <div className="absolute inset-0 bg-primary/30 blur-sm" />
+                    </motion.div>
+                  </div>
 
-                <div className="text-right mt-1">
-                  <span className="text-sm text-muted-foreground">
-                    {skill.level}%
-                  </span>
+                  <div className="text-right mt-1">
+                    <span className="text-sm text-muted-foreground/90 group-hover:text-primary/80 transition-colors duration-300">
+                      {skill.level}%
+                    </span>
+                  </div>
+
+                  {/* Bottom glow line */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-500" />
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
       </div>
+
+      {/* Add custom styles */}
+      <style jsx>{`
+        .glow-text {
+          text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5),
+                       0 0 20px rgba(var(--primary-rgb), 0.3),
+                       0 0 30px rgba(var(--primary-rgb), 0.1);
+        }
+        
+        .shadow-glow {
+          box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5),
+                      0 0 20px rgba(var(--primary-rgb), 0.3);
+        }
+        
+        .hover\\:shadow-glow-lg:hover {
+          box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.5);
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+        
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
