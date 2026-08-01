@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, User, Brain, Wrench, Database } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -64,11 +64,9 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-6">
             {/* Card 1 - Web Development */}
             <div className="group relative">
-              {/* Glassmorphism base with glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500" />
               
-              {/* Card content with glassmorphism */}
               <div className="relative backdrop-blur-md bg-background/40 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl">
                 <div className="flex items-start gap-4">
                   <div className="relative">
@@ -82,72 +80,88 @@ export const AboutSection = () => {
                       Web Development
                     </h4>
                     <p className="text-muted-foreground/90 group-hover:text-foreground/80 transition-colors duration-300">
-                      Creating responsive websites and web applications with modern frameworks.
+                      Building responsive and scalable web applications using React, Tailwind CSS, Node.js, and modern frameworks.
                     </p>
                   </div>
                 </div>
-                
-                {/* Bottom glow line */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-500" />
               </div>
             </div>
 
-            {/* Card 2 - UI/UX Design */}
+            {/* Card 2 - Software Engineering */}
             <div className="group relative">
-              {/* Glassmorphism base with glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500" />
               
-              {/* Card content with glassmorphism */}
               <div className="relative backdrop-blur-md bg-background/40 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl">
                 <div className="flex items-start gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 bg-primary/30 rounded-full blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
                     <div className="relative p-3 rounded-full bg-primary/20 backdrop-blur-sm group-hover:bg-primary/30 transition-all duration-300">
-                      <User className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                      <Database className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
                   </div>
                   <div className="text-left">
                     <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                      UI/UX Design
+                      Software Engineering
                     </h4>
                     <p className="text-muted-foreground/90 group-hover:text-foreground/80 transition-colors duration-300">
-                      Designing intuitive user interfaces and seamless user experiences.
+                      Developing reliable software solutions through feature implementation, testing, debugging, and engineering best practices.
                     </p>
                   </div>
                 </div>
-                
-                {/* Bottom glow line */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-500" />
               </div>
             </div>
 
-            {/* Card 3 - Project Management */}
+            {/* Card 3 - Scripting Automation */}
             <div className="group relative">
-              {/* Glassmorphism base with glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500" />
               
-              {/* Card content with glassmorphism */}
               <div className="relative backdrop-blur-md bg-background/40 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl">
                 <div className="flex items-start gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 bg-primary/30 rounded-full blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
                     <div className="relative p-3 rounded-full bg-primary/20 backdrop-blur-sm group-hover:bg-primary/30 transition-all duration-300">
-                      <Briefcase className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                      <Wrench className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
                   </div>
                   <div className="text-left">
                     <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
-                      Project Management
+                      Scripting Automation
                     </h4>
                     <p className="text-muted-foreground/90 group-hover:text-foreground/80 transition-colors duration-300">
-                      Leading projects from conception to completion with agile methodologies.
+                      Creating automation scripts and developer tools to improve workflows, reduce repetitive tasks, and increase efficiency.
                     </p>
                   </div>
                 </div>
-                
-                {/* Bottom glow line */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-500" />
+              </div>
+            </div>
+
+            {/* Card 4 - AI & LLM Platforms */}
+            <div className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-500" />
+              
+              <div className="relative backdrop-blur-md bg-background/40 rounded-xl p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 shadow-xl">
+                <div className="flex items-start gap-4">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/30 rounded-full blur-md opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
+                    <div className="relative p-3 rounded-full bg-primary/20 backdrop-blur-sm group-hover:bg-primary/30 transition-all duration-300">
+                      <Brain className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-lg group-hover:text-primary transition-colors duration-300">
+                      AI & LLM Platforms
+                    </h4>
+                    <p className="text-muted-foreground/90 group-hover:text-foreground/80 transition-colors duration-300">
+                      Exploring AI-driven applications and contributing to intelligent software workflows and automation systems.
+                    </p>
+                  </div>
+                </div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-3/4 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-500" />
               </div>
             </div>

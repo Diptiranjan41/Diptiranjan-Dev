@@ -1,4 +1,4 @@
-import { ArrowUp, Sparkles, Heart } from "lucide-react";
+import { ArrowUp, Sparkles, Heart, Code, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Footer = () => {
@@ -35,7 +35,7 @@ export const Footer = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative">
-        {/* Main footer container with glass effect */}
+        {/* Main footer container with glass effect - border removed */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,20 +43,14 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="group relative"
         >
-          {/* Glowing border effect */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-3xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-700" />
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40 rounded-3xl opacity-0 group-hover:opacity-75 blur-xl transition-all duration-700" />
-          
-          {/* Main glass container */}
-          <div className="relative backdrop-blur-xl bg-background/40 rounded-3xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 shadow-2xl">
+          {/* Glowing border effect - removed */}
+          {/* Main glass container without border */}
+          <div className="relative backdrop-blur-xl bg-background/40 rounded-3xl p-8 shadow-2xl">
             {/* Top gradient line */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-1/2 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-700" />
             
-            {/* Decorative corner elements */}
-            <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-primary/30 rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-primary/30 rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-primary/30 rounded-br-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            {/* Decorative corner elements - removed */}
+            {/* <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-primary/30 rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
               {/* Left section - Brand and copyright */}
@@ -68,45 +62,85 @@ export const Footer = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-transparent rounded-2xl opacity-0 group-hover/brand:opacity-100 blur-xl transition-opacity duration-500" />
                 
                 <div className="relative">
-                  {/* Logo/Brand with glass effect */}
-                  <div className="flex items-center gap-2 mb-3 justify-center md:justify-start">
+                  {/* Logo/Brand with creative design */}
+                  <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
                     <div className="relative">
                       <div className="absolute inset-0 bg-primary/30 rounded-full blur-md opacity-0 group-hover/brand:opacity-70 transition-opacity duration-300" />
-                      <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm border border-primary/30 flex items-center justify-center">
-                        <Sparkles size={16} className="text-primary" />
+                      <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 backdrop-blur-sm border border-primary/30 flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                        <Code size={20} className="text-primary" />
                       </div>
                     </div>
-                    <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                      Diptiranjan.co
-                    </span>
+                    <div className="relative">
+                      <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 block">
+                        Diptiranjan
+                      </span>
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <span className="text-xs font-medium text-primary/80 bg-primary/10 px-2 py-0.5 rounded-full border border-primary/20">
+                          ✦ Software Engineer
+                        </span>
+                        <Zap size={12} className="text-primary/60 animate-pulse" />
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Copyright text with glass effect */}
-                  <p className="text-sm text-muted-foreground/90 backdrop-blur-sm bg-background/20 px-4 py-2 rounded-full border border-primary/10 inline-block">
-                    &copy; {new Date().getFullYear()}{" "}
-                    <span className="font-semibold text-primary">
-                      Diptiranjan.co
-                    </span>
-                    . All rights reserved.
-                  </p>
+                  {/* Creative tagline with glass effect */}
+                  <div className="relative inline-block">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent blur-xl" />
+                    <p className="relative text-sm text-muted-foreground/80 max-w-md mx-auto md:mx-0 leading-relaxed backdrop-blur-sm bg-background/20 px-4 py-2 rounded-xl border border-primary/10">
+                      <span className="text-primary font-medium">✦</span> Building innovative web solutions with modern technologies.
+                      <span className="block text-xs text-muted-foreground/60 mt-1.5 tracking-wider">
+                        <span className="inline-block px-2 py-0.5 bg-primary/5 rounded border border-primary/10 mx-0.5">React</span>
+                        <span className="mx-1 text-primary/30">•</span>
+                        <span className="inline-block px-2 py-0.5 bg-primary/5 rounded border border-primary/10 mx-0.5">Node.js</span>
+                        <span className="mx-1 text-primary/30">•</span>
+                        <span className="inline-block px-2 py-0.5 bg-primary/5 rounded border border-primary/10 mx-0.5">Python</span>
+                        <span className="mx-1 text-primary/30">•</span>
+                        <span className="inline-block px-2 py-0.5 bg-primary/5 rounded border border-primary/10 mx-0.5">AI/ML</span>
+                      </span>
+                    </p>
+                  </div>
 
-                  {/* Crafted with love text */}
-                  <motion.p
+                  {/* Creative copyright with unique design */}
+                  <div className="mt-5 flex items-center gap-3 justify-center md:justify-start">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 backdrop-blur-sm">
+                      <span className="text-xs font-light text-muted-foreground/50">
+                        &copy; {new Date().getFullYear()}
+                      </span>
+                      <span className="w-px h-3 bg-primary/20" />
+                      <span className="text-xs font-light text-muted-foreground/60">
+                        All Rights Reserved
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Creative "Made with love" with unique styling */}
+                  <motion.div
                     animate={{
-                      scale: [1, 1.05, 1],
+                      scale: [1, 1.03, 1],
                     }}
                     transition={{
                       duration: 3,
                       repeat: Infinity,
                       repeatType: "reverse",
                     }}
-                    className="text-xs text-muted-foreground/70 mt-3 flex items-center gap-1 justify-center md:justify-start"
+                    className="mt-3 flex items-center gap-2 justify-center md:justify-start"
                   >
-                    <span>Crafted with</span>
-                    <Heart size={12} className="text-red-500 animate-pulse" />
-                    <span>by</span>
-                    <span className="font-medium text-primary">Diptiranjan</span>
-                  </motion.p>
+                    <span className="text-xs text-muted-foreground/30 font-light tracking-wider uppercase">
+                      Made with
+                    </span>
+                    <div className="relative group/heart">
+                      <Heart 
+                        size={14} 
+                        className="text-primary/50 group-hover/heart:scale-125 transition-transform duration-300 group-hover/heart:text-red-500" 
+                      />
+                      <div className="absolute inset-0 bg-red-500/20 rounded-full blur-md opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <span className="text-xs text-muted-foreground/30 font-light">by</span>
+                    <span className="text-xs font-medium bg-gradient-to-r from-primary/60 to-primary/30 bg-clip-text text-transparent hover:from-primary hover:to-primary/60 transition-all duration-300 cursor-pointer">
+                      Diptiranjan
+                    </span>
+                    <span className="text-xs text-muted-foreground/20">✦</span>
+                  </motion.div>
                 </div>
               </motion.div>
 
@@ -204,3 +238,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+

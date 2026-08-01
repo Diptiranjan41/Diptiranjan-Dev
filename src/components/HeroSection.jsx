@@ -1,10 +1,10 @@
 import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 
-const heroText = `💻 I'm a Full Stack Web Developer crafting 🌐 responsive and ⚙️ scalable 
-web apps using React, Node.js, and MongoDB. I focus on clean UI, robust backend logic, and
- real-world solutions. 🎯 Currently preparing for placements and exploring freelance
- opportunities worldwide to build impactful, user-friendly projects with modern technologies.`;
+const heroText = `👨‍💻 Software Engineer crafting 🌐 responsive and ⚙️ scalable 
+web applications using React, Node.js, and MongoDB. I focus on clean UI, robust backend logic, 
+and real-world solutions. 🎯 Currently preparing for placements and exploring freelance
+opportunities worldwide to build impactful, user-friendly projects with modern technologies.`;
 const words = heroText.split(" ");
 
 export const HeroSection = () => {
