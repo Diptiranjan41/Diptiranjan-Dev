@@ -5,20 +5,19 @@ import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { ExperienceSection } from "../components/ExperienceSection";
-
 import { PricingSection } from "@/components/PricingSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { AchievementSection } from "../components/AchievementSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
-
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+
       {/* Theme Toggle */}
       <ThemeToggle />
-      
+
       {/* Background Effects */}
       <StarBackground />
 
@@ -28,20 +27,25 @@ export const Home = () => {
       {/* Main Content */}
       <main>
         <HeroSection />
+
         <AboutSection />
+
         <SkillsSection />
+
         <ExperienceSection />
-       
+
         <ProjectsSection />
+
         <AchievementSection />
+
         <PricingSection />
 
-        
-        < ContactSection />
+        <ContactSection />
       </main>
 
       {/* Footer */}
       <Footer />
+
     </div>
   );
 };
